@@ -1,0 +1,22 @@
+<!doctype html>
+<head>
+</head>
+<body>
+<h1>Getting Correct Amount of Coins</h1>
+<p>A prototype API for breaking down a dollar and coin amount into coins.</p>
+<div style="height: 200;width: 1000px;">
+{% if mess %}
+<div style="color: red;">{{ mess }}</div>
+{% endif %}
+{% if x %}  
+   <form action="http://localhost:5000/api/v1/coins" method="GET">
+     <input type="text" name="amount">
+     <button>Submit</button>
+   </form>
+{% else %}
+   <div>{{amount}}=></div>
+   <div>{{ coins }}</div>
+{% endif %}
+</div>
+</body>
+</html>
